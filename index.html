@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PetLo | Pet Supplies Catalog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home">PetLo</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Everything your pet loves, in one place.</h1>
+        <p>Food, toys and everyday essentials for dogs, cats and other furry friends.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#products">Browse products</a>
+          <a class="btn btn-soft" href="#contact">Ask a question</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="paw">
+          <span class="toe"></span>
+          <span class="toe"></span>
+          <span class="toe"></span>
+          <span class="toe"></span>
+          <span class="pad"></span>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <div class="section-head">
+        <h2>Products</h2>
+        <div class="filters" role="group" aria-label="Filter products by category">
+          <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-category="Dogs" aria-pressed="false">Dogs</button>
+          <button type="button" class="filter-btn" data-category="Cats" aria-pressed="false">Cats</button>
+          <button type="button" class="filter-btn" data-category="Small Pets" aria-pressed="false">Small Pets</button>
+        </div>
+      </div>
+      <div id="productGrid"></div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-layout">
+        <div class="contact-intro">
+          <h2>Contact us</h2>
+          <p>Not sure what your pet needs? Send us a message and we'll help you pick the right food, toy or supply.</p>
+        </div>
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us about your pet"></textarea>
+          </div>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 PetLo. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
